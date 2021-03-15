@@ -1,0 +1,137 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package av1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author SEICE
+ */
+public class Av1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        double av1;
+        double av2;
+        double av3;
+        double av4;
+        double media;
+        double result;
+        double freq;
+        int f2;
+        int f1;
+        int f3;
+        int f4;
+        
+        Scanner ler = new Scanner(System.in);
+        System.out.print("Digite a nota da AV1 do Aluno(a): ");
+        av1 = ler.nextDouble();
+        
+        while(av1>10 || av1<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV1 do aluno(a): ");
+            av1 = ler.nextDouble();
+            
+        }
+        
+        System.out.print("Digite o total de faltas na AV1 do aluno(a): ");
+        f1 = ler.nextInt();
+        
+        
+        while(f1>10 || f1<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV1 do aluno(a): ");
+            f1 = ler.nextInt();
+            
+        }
+        
+        System.out.print("Digite a nota da AV2 do Aluno(a): ");
+        av2 = ler.nextDouble();
+        
+        while(av2>10 || av2 <0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV2 do aluno(a): ");
+            av2 = ler.nextDouble();
+            
+        }
+            
+        System.out.print("Digite o total de faltas na AV2 do aluno(a): ");
+        f2 = ler.nextInt();
+        
+        
+         while(f2>10 || f2<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV2 do aluno(a): ");
+            f2 = ler.nextInt();
+            
+        }
+
+        System.out.print("Digite a nota da AV3 do Aluno(a): ");
+        av3 = ler.nextDouble();
+        
+        while(av3>10 || av3<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV3 do aluno(a): ");
+            av3 = ler.nextDouble();
+            
+        }
+        
+        System.out.print("Digite o total de faltas na AV3 do aluno(a): ");
+        f3 = ler.nextInt();
+        
+         while(f3>10 || f3<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV3 do aluno(a): ");
+            f3 = ler.nextInt();
+            
+        }
+
+        
+        System.out.print("Digite a nota da AV4 do Aluno(a): ");
+        av4 = ler.nextDouble();
+        
+        
+        while(av4>10 || av4<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV4 do aluno(a): ");
+             av4 = ler.nextDouble();
+        }
+        
+        System.out.print("Digite o total de faltas na AV4 do aluno(a): ");
+        f4 = ler.nextInt();
+        
+        while(f4>10 || f4<0){
+            
+            System.out.print("Entrada inválida, digite novamente a AV4 do aluno(a): ");
+            f4 = ler.nextInt();
+        }
+        
+        media = (av1+av2+av3+av4)/4;
+        freq = f1+f2+f3+f4;
+        result= (freq *25)/100;
+        if(media>=7 && freq<= result){
+            
+            System.out.println("VOCÊ FOI APROVADO!");
+            
+        }else if(media >=5 && freq<= result){
+            
+            System.out.println("VOCÊ ESTÁ DE RECUPERAÇÃO!");
+            
+        }else{
+            
+            System.out.println("VOCÊ ESTÁ REPROVADO!");
+            
+        }
+        
+        
+        
+    }
+    
+}
